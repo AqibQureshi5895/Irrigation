@@ -1,0 +1,37 @@
+.toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  @include small-screen {
+    position: static;
+  }
+
+  @include desktop-min {
+    display: none;
+  }
+
+  .bar {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+  }
+}
+
+.change {
+  .bar-1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-7px, 7px);
+  }
+
+  .bar-2 {
+    opacity: 0;
+  }
+
+  .bar-3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
+}

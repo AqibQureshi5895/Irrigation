@@ -1,0 +1,263 @@
+.header {
+  // logo section
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 1.6rem;
+  padding-bottom: 2.2rem;
+  background-color: white;
+  box-shadow: $basic-shadow;
+  z-index: 10;
+
+  .flex-between {
+    flex-direction: column;
+    align-items: flex-start;
+    @include small-screen {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    display: flex !important;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    @include small-screen {
+      margin-bottom: 0;
+    }
+
+    // Site logo
+    &__left {
+      height: 36px;
+      margin-right: 1rem;
+
+      @include ipad-min {
+        height: 42px;
+      }
+    }
+    &__right {
+      font-size: 1.2rem;
+      font-weight: $Bold;
+      text-transform: uppercase;
+      @include ipad-min {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  //logo section end
+
+  // ----------------------------------------right navigation section starts
+
+  // right side navigation starts
+  .navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include small-screen {
+      width: fit-content;
+      display: block;
+    }
+
+    //basic code for class link in both top and bottom nav-link on right side
+    .link {
+      display: block;
+      @include desktop-min {
+        display: inline-block;
+      }
+
+      @include hover-focus-active {
+        color: $primary-green;
+        font-weight: $Medium;
+      }
+    }
+
+    // navigation Top block
+
+    &-top {
+      float: right;
+      display: flex;
+      align-items: center;
+
+      @include desktop-min {
+        margin-bottom: 1.3rem;
+      }
+
+      // links of top nav
+      &__links {
+        top: 310px;
+        padding-bottom: 1rem;
+        @include small-screen {
+          top: 270px;
+        }
+        @include ipad-min {
+          top: 285px;
+        }
+        @include desktop-min {
+          padding-bottom: 0;
+        }
+        // nav-link top
+        .link {
+          padding: 0.8rem 0;
+          @include desktop-min {
+            padding: 0 0;
+            margin-right: 2rem; // right margin of link at desktop n above
+          }
+        }
+      }
+      // links of top nav ends
+
+      //change fontsize block
+      &__fontsize {
+        border-right: 1px solid $primary-color;
+        // common class for different fonts size
+        .fontchange {
+          font-weight: $Bold;
+          margin-right: 0.5rem;
+          font-size: 1.4rem;
+          @include ipad-min {
+            margin-right: 15px;
+            font-size: 1.4rem;
+          }
+          &:first-child {
+            font-size: 1.2rem;
+
+            @include ipad-min {
+              font-size: 1.2rem;
+            }
+          }
+          &:last-child {
+            font-size: 1.6rem;
+
+            @include ipad-min {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+      //change fontsize block ends
+
+      //select language block
+      &__language {
+        padding: 0 0.5rem;
+        border-right: 1px solid $primary-color;
+        @include ipad-min {
+          padding: 0 1.9rem;
+        }
+        // select tag for language
+        .select-language {
+          border: none;
+        }
+      }
+      //select language block end
+
+      //select color block
+      &__colors {
+        padding: 0 1rem;
+        border-right: 1px solid $primary-color;
+
+        @include ipad-min {
+          padding: 0 1.5rem;
+        }
+
+        // to change color common class
+        .change-color {
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+          margin-right: 0.9rem;
+          @include ipad-min {
+            height: 15px;
+            width: 15px;
+            margin-right: 0.5rem;
+          }
+        }
+        &__blue {
+          background-color: $primary-blue-btn;
+        }
+        &__green {
+          background-color: $primary-green-btn;
+        }
+        &__yellow {
+          background-color: $primary-yellow-btn;
+          margin-right: 0 !important;
+        }
+      }
+      //select color block ends
+
+      //search-bar block
+      &__search {
+        line-height: 0;
+        padding-left: 1rem;
+
+        @include small-screen {
+          margin-right: 2rem;
+        }
+
+        @include ipad-min {
+          line-height: 0;
+          padding-left: 1.2rem;
+        }
+        // search bar input
+        .search-bar {
+          display: none;
+        }
+        //search icon
+        .icon {
+          background-color: transparent;
+        }
+      }
+    }
+    // navigation top ends
+
+    // navigation bottom block
+    &-bottom {
+      clear: both;
+      float: right;
+
+      // ul for bottom-link
+      &__links {
+        top: 108px;
+        padding-top: 1rem;
+
+        @include small-screen {
+          top: 70px;
+        }
+        @include ipad-min {
+          top: 80px;
+        }
+
+        @include desktop-min {
+          padding-top: 0;
+        }
+
+        // bottom-nav-link
+        .link {
+          padding: 0.8rem 0;
+
+          &:first-child {
+            padding-left: 0;
+          }
+
+          &:last-child {
+            padding-right: 0;
+            border-right: none;
+          }
+
+          @include desktop-min {
+            padding: 0 0.6rem 0 0.6rem;
+
+            border-right: 1px solid $primary-color;
+          }
+
+          @include meduim-desktop-min {
+            padding: 0 1rem 0 1rem;
+          }
+        }
+      }
+    }
+    // navigation bottom block ends
+  }
+  // right side navigation ends
+}
+// header ends

@@ -1,0 +1,12 @@
+// button style of page
+.know-more {
+  text-transform: uppercase;
+  background-color: white;
+  color: #272727 !important;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+
+  @include desktop-min {
+    font-size: 2.2rem;
+  }
+}

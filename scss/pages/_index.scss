@@ -1,0 +1,328 @@
+.hero-banner {
+  //background image for hero banner
+  position: relative;
+  height: 420px;
+  margin-bottom: 13rem;
+
+  @include ipad-min {
+    height: 480px;
+  }
+  @include desktop-min {
+    height: 520px;
+  }
+
+  &__background {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    .bg-img {
+      width: 100% !important;
+      height: 420px;
+      @include ipad-min {
+        height: 480px;
+      }
+      @include desktop-min {
+        height: 520px;
+      }
+    }
+  }
+  //heading section hero banner
+  &__heading {
+    //title
+    color: $white;
+    text-transform: uppercase;
+    padding-top: 16rem;
+    @include desktop-min {
+      padding-top: 23.7rem;
+    }
+
+    &__title {
+      width: fit-content;
+      padding-left: 1.7rem;
+      padding-right: 2.6rem;
+      font-size: 4rem;
+      font-weight: $Black;
+      background-color: $primary-green;
+      @include small-screen {
+        font-size: 4.5rem;
+      }
+      @include ipad-min {
+        font-size: 5.7rem;
+      }
+    }
+    //subtitle
+    &__subtitle {
+      margin-bottom: 4.7rem;
+      padding: 1rem 1.5rem;
+      width: fit-content;
+      font-size: 2rem;
+      font-weight: $Black;
+      background-color: $primary-green;
+      @include small-screen {
+        font-size: 2.5rem;
+      }
+      @include ipad-min {
+        font-size: 3.5rem;
+        padding: 1.2rem 2.1rem;
+      }
+    }
+  }
+
+  // arrow down to irrigation
+
+  &__down {
+    background-color: $primary-green;
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -39px;
+
+    margin: 0 auto;
+    @include ipad-min {
+      //   bottom: -60px;
+    }
+    @include desktop-min {
+      //   bottom: 0px;
+    }
+
+    .down-arrow {
+      font-size: 4rem;
+      color: $white !important;
+      padding: 1.2rem 2.7rem;
+    }
+  }
+}
+
+//develop and manage
+
+.develop {
+  text-transform: uppercase;
+  margin-bottom: 12rem;
+  .wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    font-weight: $Black;
+  }
+  // top section
+  &-top {
+    margin-bottom: 6rem;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    @include ipad-min {
+      display: block;
+      margin-bottom: 11rem;
+    }
+
+    // heading
+    .develop__heading {
+      .subtitle {
+        font-weight: $Black;
+        font-size: 2rem;
+        @include small-screen {
+          font-size: 3.5rem;
+        }
+        @include desktop-min {
+          font-size: 4.3rem;
+        }
+      }
+      &__title {
+        font-size: 5rem;
+        font-weight: $Black;
+        font-family: sans-serif;
+        letter-spacing: -4px;
+        background-image: url("../img/png/irrigation-title-bg.jpg");
+        width: fit-content;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom right;
+        color: transparent;
+        height: fit-content;
+        line-height: 0.75;
+        -webkit-background-clip: text;
+
+        @include small-screen {
+          font-size: 8.5rem;
+        }
+        @include desktop-min {
+          font-size: 12rem;
+          height: 92px;
+        }
+      }
+      &__subheader {
+        padding-right: 0;
+        @include ipad-min {
+          padding-left: 11.5rem;
+        }
+      }
+      &__location {
+        padding-right: 0;
+        text-align: left;
+        @include ipad-min {
+          text-align: right;
+          padding-right: 15rem;
+        }
+      }
+    }
+    // logo for irrigation
+    .develop__logo {
+      position: static;
+      @include ipad-min {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .vidarbh-logo {
+        height: 130px;
+        @include small-screen {
+          height: 150px;
+        }
+        @include desktop-min {
+          height: auto;
+        }
+      }
+    }
+  }
+  &-bottom {
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto;
+    @include ipad-min {
+      max-width: 100%;
+    }
+
+    .develop__irrgation {
+      text-align: center;
+      font-size: 1.6rem;
+      height: 140px;
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      @include ipad-min {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+//about VIDC
+.about {
+  background-position: center;
+  background-image: url("../img/png/about-vidc-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 9.2rem;
+  padding-bottom: 7.7rem;
+  margin-bottom: 15.1rem;
+  .wrapper {
+    display: flex;
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    @include ipad-min {
+      align-items: initial;
+      flex-wrap: nowrap;
+    }
+  }
+  &__video {
+    position: relative;
+    .basic-video {
+      max-width: 100%;
+      height: 250px;
+      border-radius: 1rem;
+      object-fit: cover;
+      object-position: center;
+      margin-bottom: 2rem;
+      @include small-screen {
+        height: auto;
+      }
+      @include ipad-min {
+        max-width: 400px;
+        height: 352px;
+        margin-bottom: 0;
+      }
+      @include desktop-min {
+        max-width: 500px;
+      }
+      @include meduim-desktop-min {
+        max-width: 556px;
+      }
+    }
+    .play-btn {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      border: 2px solid $light-green;
+      z-index: 1;
+      padding: 3px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      height: fit-content;
+      cursor: pointer;
+      @include small-screen {
+        top: 45%;
+      }
+      .play {
+        background-color: $light-green;
+        height: 58px;
+        width: 58px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        @include small-screen {
+          height: 68px;
+          width: 68px;
+        }
+      }
+
+      img {
+        height: 22px;
+        margin-left: 6px;
+      }
+    }
+  }
+  &__vidc {
+    color: $white;
+    @include ipad-min {
+      padding-left: 2rem;
+      max-width: 395px;
+    }
+    @include desktop-min {
+      padding-left: 0;
+    }
+    &__title {
+      font-size: 3.4rem;
+      font-weight: $Black;
+      margin-bottom: 1.6rem;
+      @include desktop-min {
+        font-size: 3.6rem;
+      }
+    }
+    &__description {
+      margin-bottom: 3rem;
+      font-size: 1.4rem;
+      @include desktop-min {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .know-more {
+    background-color: $light-green;
+    color: $white !important;
+  }
+}

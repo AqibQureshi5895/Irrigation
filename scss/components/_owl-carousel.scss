@@ -1,0 +1,31 @@
+.owl-carousel {
+  position: relative;
+}
+
+.owl-dots {
+  padding-top: 2rem;
+  text-align: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 5.4rem;
+  // dots button
+  button.owl-dot {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid white;
+    margin-right: 1.5rem;
+    &.active {
+      background-color: $white;
+      border: none;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  // when dot is active
+}

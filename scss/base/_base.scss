@@ -1,0 +1,41 @@
+html {
+  font-size: 62.5%; // means 1rem == 10px
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: $primary-color;
+  font-family: $primary-font;
+  line-height: normal;
+  font-size: 1.4rem;
+}
+
+a {
+  display: inline-block !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  display: inline-block;
+}
+
+button {
+  outline: none;
+  border: none;
+}
